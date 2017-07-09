@@ -11,8 +11,18 @@ import BPBlockActivityIndicator
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var blockIndicator: BPBlockActivityIndicator!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    @IBAction func startAnimate(_ sender: Any) {
+        blockIndicator.animate()
+    }
+    
+    @IBAction func stopAnimate(_ sender: Any) {
+        blockIndicator.stop()
     }
 }
 

@@ -13,19 +13,19 @@
 		4AB4B9351F126DA800B090DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AB4B9341F126DA800B090DB /* Assets.xcassets */; };
 		4AB4B9381F126DA800B090DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AB4B9361F126DA800B090DB /* LaunchScreen.storyboard */; };
 		4AB4B9471F126EEB00B090DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AB4B9461F126EEB00B090DB /* UIKit.framework */; };
+		4AB4B9491F1276AF00B090DB /* BPBlockLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB4B9481F1276AF00B090DB /* BPBlockLayer.swift */; };
+		4AB4B94A1F12786E00B090DB /* BPBlockLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB4B9481F1276AF00B090DB /* BPBlockLayer.swift */; };
+		4AB4B94C1F12790300B090DB /* BPCubeSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB4B94B1F12790300B090DB /* BPCubeSpace.swift */; };
+		4AB4B94D1F127A5C00B090DB /* BPCubeSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB4B94B1F12790300B090DB /* BPCubeSpace.swift */; };
+		4AB4B94E1F127FEB00B090DB /* BPBlockActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* BPBlockActivityIndicator.swift */; };
+		4AB4B9501F12889100B090DB /* CommonAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB4B94F1F12889100B090DB /* CommonAnimation.swift */; };
+		4AB4B9511F12889A00B090DB /* CommonAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB4B94F1F12889100B090DB /* CommonAnimation.swift */; };
 		52D6D9871BEFF229002C0205 /* BPBlockActivityIndicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D97C1BEFF229002C0205 /* BPBlockActivityIndicator.framework */; };
 		8933C7851EB5B820000D00A4 /* BPBlockActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* BPBlockActivityIndicator.swift */; };
 		8933C7901EB5B82D000D00A4 /* BPBlockActivityIndicatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7891EB5B82A000D00A4 /* BPBlockActivityIndicatorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4AB4B93D1F126DBF00B090DB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 52D6D9731BEFF229002C0205 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 52D6D97B1BEFF229002C0205;
-			remoteInfo = "BPBlockActivityIndicator-iOS";
-		};
 		52D6D9881BEFF229002C0205 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 52D6D9731BEFF229002C0205 /* Project object */;
@@ -44,6 +44,9 @@
 		4AB4B9371F126DA800B090DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4AB4B9391F126DA800B090DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AB4B9461F126EEB00B090DB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4AB4B9481F1276AF00B090DB /* BPBlockLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPBlockLayer.swift; sourceTree = "<group>"; };
+		4AB4B94B1F12790300B090DB /* BPCubeSpace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPCubeSpace.swift; sourceTree = "<group>"; };
+		4AB4B94F1F12889100B090DB /* CommonAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonAnimation.swift; sourceTree = "<group>"; };
 		52D6D97C1BEFF229002C0205 /* BPBlockActivityIndicator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BPBlockActivityIndicator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6D9861BEFF229002C0205 /* BPBlockActivityIndicator-iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BPBlockActivityIndicator-iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8933C7841EB5B820000D00A4 /* BPBlockActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPBlockActivityIndicator.swift; sourceTree = "<group>"; };
@@ -135,6 +138,9 @@
 			isa = PBXGroup;
 			children = (
 				8933C7841EB5B820000D00A4 /* BPBlockActivityIndicator.swift */,
+				4AB4B94B1F12790300B090DB /* BPCubeSpace.swift */,
+				4AB4B9481F1276AF00B090DB /* BPBlockLayer.swift */,
+				4AB4B94F1F12889100B090DB /* CommonAnimation.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -188,7 +194,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				4AB4B93E1F126DBF00B090DB /* PBXTargetDependency */,
 			);
 			name = Example;
 			productName = Example;
@@ -308,6 +313,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AB4B9511F12889A00B090DB /* CommonAnimation.swift in Sources */,
+				4AB4B94E1F127FEB00B090DB /* BPBlockActivityIndicator.swift in Sources */,
+				4AB4B94C1F12790300B090DB /* BPCubeSpace.swift in Sources */,
+				4AB4B9491F1276AF00B090DB /* BPBlockLayer.swift in Sources */,
 				4AB4B9301F126DA800B090DB /* ViewController.swift in Sources */,
 				4AB4B92E1F126DA800B090DB /* AppDelegate.swift in Sources */,
 			);
@@ -317,6 +326,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AB4B94D1F127A5C00B090DB /* BPCubeSpace.swift in Sources */,
+				4AB4B9501F12889100B090DB /* CommonAnimation.swift in Sources */,
+				4AB4B94A1F12786E00B090DB /* BPBlockLayer.swift in Sources */,
 				8933C7851EB5B820000D00A4 /* BPBlockActivityIndicator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,11 +344,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4AB4B93E1F126DBF00B090DB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 52D6D97B1BEFF229002C0205 /* BPBlockActivityIndicator-iOS */;
-			targetProxy = 4AB4B93D1F126DBF00B090DB /* PBXContainerItemProxy */;
-		};
 		52D6D9891BEFF229002C0205 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 52D6D97B1BEFF229002C0205 /* BPBlockActivityIndicator-iOS */;
