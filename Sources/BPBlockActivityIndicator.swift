@@ -6,4 +6,4 @@
 //  Copyright © 2017 BPBlockActivityIndicator. All rights reserved.
 //
 
-import Foundation
+import UIKit
