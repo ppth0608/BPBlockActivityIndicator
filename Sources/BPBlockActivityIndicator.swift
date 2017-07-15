@@ -8,6 +8,7 @@
 
 import UIKit
 
+@IBDesignable
 open class BPBlockActivityIndicator: UIView {
     
     fileprivate typealias Block = BPBlockLayer
