@@ -33,7 +33,8 @@ internal struct BPCubeSpace {
     var animationOrder = [1, 0, 3, 6, 7, 8, 5, 2]
     
     init(size: CGSize, margin: Double) {
-        self.cubeSize = (Double(size.width), Double(size.height))
+        let squareCubeSize = size.width <= size.height ? CGSize(width: size.width, height: size.width) : CGSize(width: size.height, height: size.height)
+        self.cubeSize = (Double(squareCubeSize.width), Double(squareCubeSize.height))
         self.margin = margin
     }
     

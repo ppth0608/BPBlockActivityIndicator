@@ -9,19 +9,31 @@
 import UIKit
 
 @IBDesignable
-open class BPBlockActivityIndicator: UIView {
+public class BPBlockActivityIndicator: UIView {
     
     fileprivate typealias Block = BPBlockLayer
     fileprivate typealias Cube = BPCubeSpace
     
     @IBInspectable
-    var movementSpeed: Double = 0.1
+    public var animationSpeed: Double = 0.1 {
+        didSet {
+            movementSpeed = animationSpeed
+        }
+    }
     
     @IBInspectable
-    var blockColor: UIColor = .blue
+    public var color: UIColor = .blue {
+        didSet {
+            blockColor = color
+            self.blocks.forEach {
+                $0?.backgroundColor = blockColor.cgColor
+            }
+        }
+    }
     
-    @IBInspectable
-    var blockMargin: Double = 1
+    fileprivate var movementSpeed: Double = 0.1
+    fileprivate var blockColor: UIColor = .blue
+    fileprivate var blockMargin: Double = 1
     
     fileprivate var cube: Cube?
     fileprivate var blocks = [Block?]()
@@ -29,7 +41,6 @@ open class BPBlockActivityIndicator: UIView {
     
     fileprivate func setupBlockLayer() {
         cube = Cube(size: frame.size, margin: blockMargin)
-        
         if let cube = cube {
             (0..<cube.blockCount)
                 .forEach {
@@ -49,9 +60,13 @@ open class BPBlockActivityIndicator: UIView {
         setupBlockLayer()
     }
     
-    public init() {
-        super.init(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
         setupBlockLayer()
+    }
+    
+    override public func awakeFromNib() {
+        super.awakeFromNib()
     }
 }
 
@@ -93,11 +108,6 @@ extension BPBlockActivityIndicator {
     
     public func blockColor(_ color: UIColor) -> Self {
         blockColor = color
-        return self
-    }
-    
-    public func blockMargin(_ margin: Double) -> Self {
-        blockMargin = margin
         return self
     }
 }
