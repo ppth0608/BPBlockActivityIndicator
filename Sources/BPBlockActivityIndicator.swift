@@ -104,9 +104,7 @@ public extension BPBlockActivityIndicator {
         }
         setupBlockLayer()
         startBlockAnimation()
-        timer = Timer.scheduledTimer(withTimeInterval: Double(cube?.blockCount ?? 0) * movementSpeed, repeats: true) { _ in
-            self.startBlockAnimation()
-        }
+        timer = Timer.scheduledTimer(timeInterval: Double(cube?.blockCount ?? 0) * movementSpeed, target: self, selector: #selector(self.startBlockAnimation), userInfo: nil, repeats: true)
         if let timer = timer {
             RunLoop.current.add(timer, forMode: .commonModes)
         }
@@ -141,7 +139,7 @@ extension BPBlockActivityIndicator {
 // MARK: Animation Logic
 fileprivate extension BPBlockActivityIndicator {
     
-    func startBlockAnimation() {
+    @objc func startBlockAnimation() {
         guard  let cube = cube else {
             return
         }
