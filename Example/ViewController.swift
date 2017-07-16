@@ -7,19 +7,33 @@
 //
 
 import UIKit
+import BPBlockActivityIndicator
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var blockIndicator: BPBlockActivityIndicator!
+    
+    var indicator: BPBlockActivityIndicator!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        // initialize BPBlockActivityIndicator programmingly
+        /*
+        indicator = BPBlockActivityIndicator(frame: CGRect(x: 30, y: 30, width: 40, height: 40))
+            .movementSpeed(0.2)
+            .blockColor(.cyan)
+        view.addSubview(indicator)
+        indicator.animate()
+        */
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func startAnimate(_ sender: Any) {
+        blockIndicator.animate()
     }
-
-
+    
+    @IBAction func stopAnimate(_ sender: Any) {
+        blockIndicator.stop()
+    }
 }
 
