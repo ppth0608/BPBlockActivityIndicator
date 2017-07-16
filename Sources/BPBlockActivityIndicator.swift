@@ -39,29 +39,15 @@ public class BPBlockActivityIndicator: UIView {
     fileprivate var blocks = [Block?]()
     fileprivate var timer: Timer?
     
-    fileprivate func setupBlockLayer() {
-        cube = Cube(size: frame.size, margin: blockMargin)
-        if let cube = cube {
-            (0..<cube.blockCount)
-                .forEach {
-                    if $0 == cube.firstEmptyIndex {
-                        self.blocks.append(nil)
-                    } else {
-                        let block = Block(frame: cube[$0], color: blockColor)
-                        self.blocks.append(block)
-                        layer.addSublayer(block)
-                    }
-            }
-        }
-    }
-    
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        setupCube()
         setupBlockLayer()
     }
     
-    public override init(frame: CGRect) {
+    override init(frame: CGRect) {
         super.init(frame: frame)
+        setupCube()
         setupBlockLayer()
     }
     
@@ -70,13 +56,53 @@ public class BPBlockActivityIndicator: UIView {
     }
 }
 
-// MARK: start / stop Animation
-extension BPBlockActivityIndicator {
+// MARK: setup View
+fileprivate extension BPBlockActivityIndicator {
     
-    public func animate() {
+    func setupCube() {
+        cube = Cube(size: frame.size, margin: blockMargin)
+    }
+    
+    func setupBlockLayer() {
+        guard let cube = cube else {
+            return
+        }
+        removeAllSublayers()
+        removeAllBlocks()
+        addBlocksToSublayer(with: cube)
+    }
+    
+    func removeAllSublayers() {
+        layer.sublayers?.forEach {
+            $0.removeFromSuperlayer()
+        }
+    }
+    
+    func removeAllBlocks() {
+        blocks.removeAll()
+    }
+    
+    func addBlocksToSublayer(with cube: Cube) {
+        (0..<cube.blockCount).forEach {
+            if $0 == cube.firstEmptyIndex {
+                self.blocks.append(nil)
+            } else {
+                let block = Block(frame: cube[$0], color: blockColor)
+                self.blocks.append(block)
+                layer.addSublayer(block)
+            }
+        }
+    }
+}
+
+// MARK: start / stop Animation
+public extension BPBlockActivityIndicator {
+    
+    func animate() {
         guard timer == nil else {
             return
         }
+        setupBlockLayer()
         startBlockAnimation()
         timer = Timer.scheduledTimer(withTimeInterval: Double(cube?.blockCount ?? 0) * movementSpeed, repeats: true) { _ in
             self.startBlockAnimation()
@@ -86,7 +112,7 @@ extension BPBlockActivityIndicator {
         }
     }
     
-    public func stop() {
+    func stop() {
         guard timer != nil else {
             return
         }
