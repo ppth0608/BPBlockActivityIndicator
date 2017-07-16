@@ -45,7 +45,7 @@ public class BPBlockActivityIndicator: UIView {
         setupBlockLayer()
     }
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         setupCube()
         setupBlockLayer()
