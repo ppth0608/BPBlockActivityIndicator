@@ -21,12 +21,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5dR-9h-bZi" customClass="BPBlockActivityIndicator" customModule="Example" customModuleProvider="target">
-                                <rect key="frame" x="147.5" y="293.5" width="80" height="80"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5dR-9h-bZi" customClass="BPBlockActivityIndicator" customModule="BPBlockActivityIndicator">
+                                <rect key="frame" x="167.5" y="313.5" width="40" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="1g1-Ol-kFt"/>
-                                    <constraint firstAttribute="width" constant="80" id="AGw-SH-aTS"/>
+                                    <constraint firstAttribute="height" constant="40" id="1g1-Ol-kFt"/>
+                                    <constraint firstAttribute="width" constant="40" id="AGw-SH-aTS"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="animationSpeed">
@@ -38,7 +38,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hI6-EU-Asm">
-                                <rect key="frame" x="162" y="393.5" width="50" height="50"/>
+                                <rect key="frame" x="162" y="373.5" width="50" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.78039215689999997" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="Pu8-lN-Uus"/>
@@ -50,7 +50,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQp-Qj-eHG">
-                                <rect key="frame" x="162" y="453.5" width="50" height="50"/>
+                                <rect key="frame" x="162" y="433.5" width="50" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="ANM-Zh-LZX"/>
