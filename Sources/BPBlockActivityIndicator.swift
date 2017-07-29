@@ -54,6 +54,12 @@ public class BPBlockActivityIndicator: UIView {
     override public func awakeFromNib() {
         super.awakeFromNib()
     }
+    
+    public override func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
+        setupCube()
+        setupBlockLayer()
+    }
 }
 
 // MARK: setup View
